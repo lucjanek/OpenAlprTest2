@@ -17,6 +17,12 @@ export default class FetchExample extends React.Component {
     }
   }
 
+   askPermissionsAsync = async () => {	
+    await Permissions.askAsync(Permissions.CAMERA);	
+    await Permissions.askAsync(Permissions.CAMERA_ROLL);	
+    await Permissions.askAsync(Permissions.READ_EXTERNAL_STORAGE);	
+  };
+
   _pickImage = async () => {
 
     this.setState({ 
